@@ -7,10 +7,10 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "inlineTemplate": true,
-          "inlineStyle": true,
+          "inlineTemplate": false,
+          "inlineStyle": false,
           "style": "scss",
-          "skipTests": true
+          "skipTests": false
         },
         "@schematics/angular:class": {
           "skipTests": true
@@ -48,7 +48,10 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.css"],
+            "styles": [
+              "@angular/material/prebuilt-themes/rose-red.css",
+              "src/styles.css"
+            ],
             "scripts": []
           },
           "configurations": {

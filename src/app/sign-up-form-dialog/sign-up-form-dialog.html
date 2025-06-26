@@ -1,0 +1,18 @@
+<h2 mat-dialog-title>Sign Up Form</h2>
+<form [formGroup]="SignUpForm" (submit)="signUpUser()">
+  <mat-dialog-content>
+    <label for="surname">Surname</label>
+    <input id="surname" type="text" formControlName="surname" />
+    <label for="name">Name</label>
+    <input id="name" type="text" formControlName="name" />
+    <label for="email">Email</label>
+    <input id="email" type="email" formControlName="email" />
+    <label for="password">Password</label>
+    <input id="password" type="text" formControlName="password" />
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button (click)="closeDialog();openLoginDialog()">Login</button>
+    <button (click)="closeDialog()">Close</button>
+    <button type="submit">Sign Up</button>
+  </mat-dialog-actions>
+</form>

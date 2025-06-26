@@ -7,6 +7,53 @@ header {
   padding: var(--content-padding);
   box-shadow: 0px 5px 25px var(--shadow-color);
 }
+.logo-field {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.logo-icon {
+  height: 100%;
+}
+.logo-text {
+  font-size: 18pt;
+  font-weight: 600;
+}
 .content {
   padding: var(--content-padding);
+}
+footer {
+  display: block;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000000;
+  color: white;
+}
+.icons {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+}
+.icon {
+  margin: 5px;
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+}
+.icon > img {
+  width: 30px;
+}
+.links {
+  display: flex;
+  justify-content: center;
+}
+.link {
+  margin: 30px 10px;
+}
+.copyright {
+  display: flex;
+  justify-content: center;
 }
