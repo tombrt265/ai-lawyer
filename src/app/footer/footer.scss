@@ -1,16 +1,20 @@
 :host {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  left: 0;
-  bottom: 0;
   height: 100px;
   width: 100%;
   background-color: var(--bg-light);
   color: var(--bg-dark);
   font-size: 9pt;
+  line-height: 30px;
 }
 .item {
   padding: 0 10px;
+}
+.logo {
+  height: 20px;
+  width: auto;
+  vertical-align: middle;
 }

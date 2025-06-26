@@ -1,5 +1,87 @@
-<main>
-  <button class="primary" matButton="elevated" (click)="openLoginDialog()">
-    LOGIN
-  </button>
+<header>
+  <a class="logo-field" [routerLink]="['/']">
+    <img src="../assets/logo.png" alt="AI Lawyer Logo" class="logo-icon" />
+    <span class="logo-text">AI Lawyer</span>
+  </a>
+  <a class="btn-primary btn-header" (click)="openLoginDialog()">Login</a>
+</header>
+<main class="main-content">
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Dein digitaler Rechtsbeistand. Rund um die Uhr.</h1>
+    <p>
+      Schnelle, zuverlässige Hilfe bei rechtlichen Fragen – powered by KI, mit
+      optionaler Anwaltprüfung.
+    </p>
+    <a href="#chat" class="btn-primary">Jetzt starten</a>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature">
+      <div class="icon">🧠</div>
+      <h3>Juristisches Wissen per Chat</h3>
+      <p>
+        Frage deine Rechtsfrage ganz einfach per Text. Unsere KI gibt dir in
+        Sekunden eine verständliche Antwort.
+      </p>
+    </div>
+    <div class="feature">
+      <div class="icon">📄</div>
+      <h3>Dokument-Check</h3>
+      <p>
+        Lade Verträge oder Briefe hoch. Wir analysieren die Inhalte und zeigen
+        dir Risiken, Klauseln und Empfehlungen.
+      </p>
+    </div>
+    <div class="feature">
+      <div class="icon">✉️</div>
+      <h3>Schreiben generieren</h3>
+      <p>
+        Ob Kündigung, Mahnung oder Rückerstattungsforderung – mit einem Klick
+        erstellt unser System rechtssichere Schreiben für dich.
+      </p>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works">
+    <h2>So funktioniert's</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-icon">1️⃣</div>
+        <h4>Frage stellen oder Dokument hochladen</h4>
+        <p>
+          Du gibst dein Anliegen ein oder lädst ein Dokument hoch, z. B.
+          Mietvertrag oder Rechnung.
+        </p>
+      </div>
+      <div class="step">
+        <div class="step-icon">2️⃣</div>
+        <h4>KI analysiert & antwortet</h4>
+        <p>
+          Unser System analysiert juristische Inhalte, erkennt Risiken und gibt
+          sofort Feedback.
+        </p>
+      </div>
+      <div class="step">
+        <div class="step-icon">3️⃣</div>
+        <h4>Optional prüfen lassen</h4>
+        <p>
+          Du kannst jedes Ergebnis von einer echten Kanzlei gegen Aufpreis
+          verifizieren lassen.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Starte jetzt kostenlos</h2>
+    <p>
+      Keine Registrierung notwendig. Du kannst sofort deine erste Frage stellen
+      oder ein Dokument prüfen lassen.
+    </p>
+    <a href="#chat" class="btn-primary">Jetzt loslegen</a>
+  </section>
 </main>

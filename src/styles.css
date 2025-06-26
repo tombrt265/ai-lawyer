@@ -13,15 +13,7 @@ body {
   --secondary-light-color: #fff36c;
   --bg-light: #ffffff;
   --bg-dark: #313638;
-}
-
-button.primary {
-  padding: 10px;
-  border: solid 1px var(--primary-color);
-  background: var(--primary-light-color);
-  color: white;
-  border-radius: 8px;
-  font-weight: bolder;
+  --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 html,
