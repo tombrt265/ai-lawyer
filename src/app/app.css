@@ -22,38 +22,3 @@ header {
 .content {
   padding: var(--content-padding);
 }
-footer {
-  display: block;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #000000;
-  color: white;
-}
-.icons {
-  display: flex;
-  justify-content: center;
-  height: 40px;
-}
-.icon {
-  margin: 5px;
-  background-color: white;
-  height: 30px;
-  width: 30px;
-  border-radius: 15px;
-}
-.icon > img {
-  width: 30px;
-}
-.links {
-  display: flex;
-  justify-content: center;
-}
-.link {
-  margin: 30px 10px;
-}
-.copyright {
-  display: flex;
-  justify-content: center;
-}

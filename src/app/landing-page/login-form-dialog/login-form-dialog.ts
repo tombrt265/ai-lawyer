@@ -6,7 +6,7 @@ import {
   MatDialogContent,
   MatDialogRef,
 } from "@angular/material/dialog";
-import { AuthService } from "../auth-service";
+import { AuthService } from "../../auth-service";
 import { SignUpFormDialog } from "../sign-up-form-dialog/sign-up-form-dialog";
 
 export interface LoginData {

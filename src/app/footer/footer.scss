@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  background-color: var(--bg-light);
+  color: var(--bg-dark);
+  font-size: 9pt;
+}
+.item {
+  padding: 0 10px;
+}

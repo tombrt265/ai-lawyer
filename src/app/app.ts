@@ -1,10 +1,10 @@
 import { Component } from "@angular/core";
 import { RouterModule } from "@angular/router";
-import { LandingPage } from "./landing-page/landing-page";
+import { Footer } from "./footer/footer";
 
 @Component({
   selector: "app-root",
-  imports: [RouterModule, LandingPage],
+  imports: [RouterModule, Footer],
   templateUrl: "./app.html",
   styleUrls: ["./app.css"],
 })

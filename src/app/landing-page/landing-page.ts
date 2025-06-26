@@ -1,5 +1,5 @@
 import { Component, inject, signal } from "@angular/core";
-import { LoginFormDialog } from "../login-form-dialog/login-form-dialog";
+import { LoginFormDialog } from "./login-form-dialog/login-form-dialog";
 import { MatDialog } from "@angular/material/dialog";
 
 @Component({
