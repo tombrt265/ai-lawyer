@@ -1,49 +1,49 @@
 {
-  "hash": "af3499a3",
-  "configHash": "2800d55e",
-  "lockfileHash": "38678905",
-  "browserHash": "c07dc9df",
+  "hash": "027ee9a2",
+  "configHash": "47c468af",
+  "lockfileHash": "97860fb2",
+  "browserHash": "da03e648",
   "optimized": {
     "@angular/common/http": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/http.mjs",
       "file": "@angular_common_http.js",
-      "fileHash": "cdee8acf",
+      "fileHash": "0a3dd506",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "9c15966a",
+      "fileHash": "06d65bb5",
       "needsInterop": false
     },
     "@angular/forms": {
       "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
-      "fileHash": "1c7ba6e4",
+      "fileHash": "d1869292",
       "needsInterop": false
     },
     "@angular/material/dialog": {
       "src": "../../../../../../node_modules/@angular/material/fesm2022/dialog.mjs",
       "file": "@angular_material_dialog.js",
-      "fileHash": "c5db0ded",
+      "fileHash": "9f73d35d",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "8804122f",
+      "fileHash": "476f8b2a",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "bddd85e8",
+      "fileHash": "d2be3373",
       "needsInterop": false
     },
     "zone.js": {
       "src": "../../../../../../node_modules/zone.js/fesm2015/zone.js",
       "file": "zone__js.js",
-      "fileHash": "f80e064a",
+      "fileHash": "31ae306e",
       "needsInterop": true
     }
   },

@@ -1,29 +1,27 @@
 import { Component, inject } from "@angular/core";
 import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
-import {
-  MatDialog,
-  MatDialogActions,
-  MatDialogContent,
-  MatDialogRef,
-} from "@angular/material/dialog";
+import { MatDialog, MatDialogRef } from "@angular/material/dialog";
 import { AuthService } from "../../auth-service";
 import { LoginFormDialog } from "../login-form-dialog/login-form-dialog";
 
-export interface LoginData {
+export interface SignUpData {
+  surname: string;
+  name: string;
   email: string;
   password: string;
 }
 
 @Component({
   selector: "app-sign-up-form-dialog",
-  imports: [ReactiveFormsModule, MatDialogContent, MatDialogActions],
+  imports: [ReactiveFormsModule],
   templateUrl: "./sign-up-form-dialog.html",
   styleUrl: "./sign-up-form-dialog.scss",
 })
 export class SignUpFormDialog {
-  authService = inject(AuthService);
-  readonly signUpDialogRef = inject(MatDialogRef);
-  readonly loginDialog = inject(MatDialog);
+  // authService is injected in SignUpDialog and LoginDialog (should be top-level-variable??)
+  private readonly authService = inject(AuthService);
+  private readonly signUpDialogRef = inject(MatDialogRef);
+  private readonly loginDialog = inject(MatDialog);
 
   SignUpForm = new FormGroup({
     surname: new FormControl(""),

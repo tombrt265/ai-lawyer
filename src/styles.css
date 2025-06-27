@@ -12,7 +12,8 @@ body {
   --secondary-color: #ffde46;
   --secondary-light-color: #fff36c;
   --bg-light: #ffffff;
-  --bg-dark: #313638;
+  --bg-dark: #333;
+  --bg-grey: #666;
   --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
