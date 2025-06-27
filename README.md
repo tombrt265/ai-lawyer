@@ -36,12 +36,14 @@
 
 # HTTPS
 git clone https://github.com/tombrt165/ai-lawyer.git
-
+cd ai-lawyer
+```
+```bash
 # SSH
 git clone git@github.com:tombrt265/ai-lawyer.git
-
 cd ai-lawyer
-
+```
+```bash
 # 2. Install Dependencies
 npm install
 npm install -g @angular/cli
@@ -49,7 +51,8 @@ npm install -g json-server
 
 # 3. Start Development Server
 ng serve
-
+```
+```bash
 # 4. Start Database
 json-server db.json
 ```
