@@ -1,21 +1,17 @@
 import { Component, inject, model, signal } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { MatDialog, MatDialogRef } from "@angular/material/dialog";
-import { AuthService } from "../../auth-service";
+import { AuthService } from "../../../services/auth-service";
 import { SignUpFormDialog } from "../sign-up-form-dialog/sign-up-form-dialog";
-
-export interface LoginData {
-  email: string;
-  password: string;
-}
+import { LoginData } from "../../../models/LoginData";
 
 @Component({
   selector: "app-login-form-dialog",
   imports: [FormsModule],
   templateUrl: "./login-form-dialog.html",
   styleUrls: [
-    "../../../styles.css",
-    "../../app.css",
+    "../../../../styles.css",
+    "../../../app.css",
     "./login-form-dialog.scss",
   ],
 })

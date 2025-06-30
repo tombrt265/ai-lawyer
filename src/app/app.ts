@@ -1,8 +1,8 @@
 import { Component, inject, signal } from "@angular/core";
 import { RouterModule } from "@angular/router";
-import { Footer } from "./footer/footer";
-import { LandingPage } from "./landing-page/landing-page";
-import { AuthService } from "./auth-service";
+import { Footer } from "./components/footer/footer";
+import { LandingPage } from "./components/landing-page/landing-page";
+import { AuthService } from "./services/auth-service";
 
 @Component({
   selector: "app-root",
@@ -12,5 +12,4 @@ import { AuthService } from "./auth-service";
 })
 export class App {
   readonly auth = inject(AuthService);
-  
 }

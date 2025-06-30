@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { inject, Injectable, signal } from "@angular/core";
-import { LoginData } from "./landing-page/login-form-dialog/login-form-dialog";
-import { SignUpData } from "./landing-page/sign-up-form-dialog/sign-up-form-dialog";
+import { LoginData } from "../models/LoginData";
+import { SignUpData } from "../models/SignUpData";
 
 @Injectable({
   providedIn: "root",
