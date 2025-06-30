@@ -1,8 +1,12 @@
+# IDE / Editor
+.vscode/
+.idea/
+
 # Dependencies
-node_modules
+node_modules/
 
 # Database
 db.json
 
-# Cache
-.angular/cache
+# Angular Cache
+.angular/
