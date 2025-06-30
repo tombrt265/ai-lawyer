@@ -24,12 +24,19 @@ export class LoginFormDialog {
   private readonly loginDialogRef = inject(MatDialogRef);
   private readonly signUpDialog = inject(MatDialog);
 
-  email = signal<string>("");
-  password = signal<string>("");
+  loginData = signal<LoginData>({ email: "", password: "" });
+
+  updateEmail(newEmail: string) {
+    this.loginData.update((data) => ({ ...data, email: newEmail }));
+  }
+
+  updatePassword(newPassword: string) {
+    this.loginData.update((data) => ({ ...data, password: newPassword }));
+  }
 
   // authService.loginUser() returns boolean, myb. work with loggedIn = signal(false)
   loginUser() {
-    this.authService.loginUser(this.email(), this.password());
+    this.authService.loginUser(this.loginData());
   }
 
   closeDialog() {

@@ -5,16 +5,16 @@
     type="email"
     name="email"
     placeholder="Email Address"
-    [ngModel]="email()"
-    (ngModelChange)="email.set($event)"
+    [ngModel]="loginData().email"
+    (ngModelChange)="updateEmail($event)"
   />
   <input
     id="password"
     type="text"
     name="password"
     placeholder="Password"
-    [ngModel]="password()"
-    (ngModelChange)="password.set($event)"
+    [ngModel]="loginData().password"
+    (ngModelChange)="updatePassword($event)"
   />
 
   <section class="buttons">

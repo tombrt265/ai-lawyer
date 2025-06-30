@@ -5,8 +5,8 @@
     type="text"
     name="surname"
     placeholder="Surname"
-    [ngModel]="surname()"
-    (ngModelChange)="surname.set($event)"
+    [ngModel]="signupData().surname"
+    (ngModelChange)="updateSurname($event)"
   />
 
   <input
@@ -14,8 +14,8 @@
     type="text"
     name="name"
     placeholder="Last Name"
-    [ngModel]="name()"
-    (ngModelChange)="name.set($event)"
+    [ngModel]="signupData().name"
+    (ngModelChange)="updateName($event)"
   />
 
   <input
@@ -23,8 +23,8 @@
     type="email"
     name="email"
     placeholder="Email Address"
-    [ngModel]="email()"
-    (ngModelChange)="email.set($event)"
+    [ngModel]="signupData().email"
+    (ngModelChange)="updateEmail($event)"
   />
 
   <input
@@ -32,8 +32,8 @@
     type="text"
     name="password"
     placeholder="Password"
-    [ngModel]="password()"
-    (ngModelChange)="password.set($event)"
+    [ngModel]="signupData().password"
+    (ngModelChange)="updatePassword($event)"
   />
 
   <section class="buttons">

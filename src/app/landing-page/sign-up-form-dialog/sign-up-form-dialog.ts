@@ -27,18 +27,31 @@ export class SignUpFormDialog {
   private readonly signUpDialogRef = inject(MatDialogRef);
   private readonly loginDialog = inject(MatDialog);
 
-  surname = signal<string>("");
-  name = signal<string>("");
-  email = signal<string>("");
-  password = signal<string>("");
+  signupData = signal<SignUpData>({
+    surname: "",
+    name: "",
+    email: "",
+    password: "",
+  });
+
+  updateSurname(newSurname: string) {
+    this.signupData.update((data) => ({ ...data, surname: newSurname }));
+  }
+
+  updateName(newName: string) {
+    this.signupData.update((data) => ({ ...data, name: newName }));
+  }
+
+  updateEmail(newEmail: string) {
+    this.signupData.update((data) => ({ ...data, email: newEmail }));
+  }
+
+  updatePassword(newPassword: string) {
+    this.signupData.update((data) => ({ ...data, password: newPassword }));
+  }
 
   signUpUser() {
-    this.authService.signUpUser(
-      this.email(),
-      this.name(),
-      this.email(),
-      this.password()
-    );
+    this.authService.signUpUser(this.signupData());
   }
 
   closeDialog() {

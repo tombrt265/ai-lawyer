@@ -1,5 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { inject, Injectable } from "@angular/core";
+import { LoginData } from "./landing-page/login-form-dialog/login-form-dialog";
+import { SignUpData } from "./landing-page/sign-up-form-dialog/sign-up-form-dialog";
 
 @Injectable({
   providedIn: "root",
@@ -8,11 +10,14 @@ export class AuthService {
   private readonly apiUrlUsers = "http://localhost:3000/users";
   private readonly http = inject(HttpClient);
 
-  async loginUser(email: string, password: string) {
+  async loginUser(loginData: LoginData) {
     const res = await fetch(`${this.apiUrlUsers}`);
     const users = await res.json();
     for (const user of users) {
-      if (email == user.email && password == user.password) {
+      if (
+        loginData.email == user.email &&
+        loginData.password == user.password
+      ) {
         console.log("Login Successful");
         return;
       }
@@ -20,28 +25,19 @@ export class AuthService {
     console.log("Login Failed");
   }
 
-  async signUpUser(
-    surname: string,
-    name: string,
-    email: string,
-    password: string
-  ) {
-    const userProfile = {
-      surname,
-      name,
-      email,
-      password,
-    };
+  async signUpUser(signupData: SignUpData) {
     const res = await fetch(`${this.apiUrlUsers}`);
     const users = await res.json();
     for (const user of users) {
-      if (email == user.email) {
+      if (signupData.email == user.email) {
         console.log("User already exists");
         return;
       }
     }
-    return this.http.post(this.apiUrlUsers, userProfile).subscribe((userProfile) => {
-      console.log("Updated users: ", userProfile);
-    });
+    return this.http
+      .post(this.apiUrlUsers, signupData)
+      .subscribe((userProfile) => {
+        console.log("Updated users: ", userProfile);
+      });
   }
 }
