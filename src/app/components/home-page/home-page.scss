@@ -1,7 +1,10 @@
 main {
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
 }
-#logoutBtn {
-  margin: 20% 0;
+.logout-btn {
+  margin: 5rem auto;
+  display: block;
+  width: fit-content;
 }
