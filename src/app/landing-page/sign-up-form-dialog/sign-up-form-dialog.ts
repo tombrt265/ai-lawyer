@@ -1,5 +1,5 @@
-import { Component, inject } from "@angular/core";
-import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
+import { Component, inject, signal } from "@angular/core";
+import { FormControl, FormGroup, FormsModule } from "@angular/forms";
 import { MatDialog, MatDialogRef } from "@angular/material/dialog";
 import { AuthService } from "../../auth-service";
 import { LoginFormDialog } from "../login-form-dialog/login-form-dialog";
@@ -13,7 +13,7 @@ export interface SignUpData {
 
 @Component({
   selector: "app-sign-up-form-dialog",
-  imports: [ReactiveFormsModule],
+  imports: [FormsModule],
   templateUrl: "./sign-up-form-dialog.html",
   styleUrls: [
     "../../../styles.css",
@@ -27,20 +27,17 @@ export class SignUpFormDialog {
   private readonly signUpDialogRef = inject(MatDialogRef);
   private readonly loginDialog = inject(MatDialog);
 
-  SignUpForm = new FormGroup({
-    surname: new FormControl(""),
-    name: new FormControl(""),
-    email: new FormControl(""),
-    password: new FormControl(""),
-  });
+  surname = signal<string>("");
+  name = signal<string>("");
+  email = signal<string>("");
+  password = signal<string>("");
 
   signUpUser() {
-    const formValues = this.SignUpForm.value;
     this.authService.signUpUser(
-      formValues.surname ?? "",
-      formValues.name ?? "",
-      formValues.email ?? "",
-      formValues.password ?? ""
+      this.email(),
+      this.name(),
+      this.email(),
+      this.password()
     );
   }
 

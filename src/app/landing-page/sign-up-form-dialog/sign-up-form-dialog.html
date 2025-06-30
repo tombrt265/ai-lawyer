@@ -1,26 +1,39 @@
 <h2>Sign Up Form</h2>
-<form [formGroup]="SignUpForm" (submit)="signUpUser()">
+<form (submit)="signUpUser()">
   <input
     id="surname"
     type="text"
+    name="surname"
     placeholder="Surname"
-    formControlName="surname"
+    [ngModel]="surname()"
+    (ngModelChange)="surname.set($event)"
   />
 
-  <input id="name" type="text" placeholder="Last Name" formControlName="name" />
+  <input
+    id="name"
+    type="text"
+    name="name"
+    placeholder="Last Name"
+    [ngModel]="name()"
+    (ngModelChange)="name.set($event)"
+  />
 
   <input
     id="email"
     type="email"
+    name="email"
     placeholder="Email Address"
-    formControlName="email"
+    [ngModel]="email()"
+    (ngModelChange)="email.set($event)"
   />
 
   <input
     id="password"
     type="text"
+    name="password"
     placeholder="Password"
-    formControlName="password"
+    [ngModel]="password()"
+    (ngModelChange)="password.set($event)"
   />
 
   <section class="buttons">

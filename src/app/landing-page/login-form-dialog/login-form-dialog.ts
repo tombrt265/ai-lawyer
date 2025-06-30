@@ -1,4 +1,4 @@
-import { Component, inject, model, OnDestroy, signal } from "@angular/core";
+import { Component, inject, model, signal } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { MatDialog, MatDialogRef } from "@angular/material/dialog";
 import { AuthService } from "../../auth-service";
@@ -19,17 +19,13 @@ export interface LoginData {
     "./login-form-dialog.scss",
   ],
 })
-export class LoginFormDialog implements OnDestroy {
+export class LoginFormDialog {
   private readonly authService = inject(AuthService);
   private readonly loginDialogRef = inject(MatDialogRef);
   private readonly signUpDialog = inject(MatDialog);
 
   email = signal<string>("");
-  password = model<string>("");
-
-  ngOnDestroy(): void {
-    console.log("Destroy");
-  }
+  password = signal<string>("");
 
   // authService.loginUser() returns boolean, myb. work with loggedIn = signal(false)
   loginUser() {
@@ -37,16 +33,10 @@ export class LoginFormDialog implements OnDestroy {
   }
 
   closeDialog() {
-    console.log("close");
     this.loginDialogRef.close();
   }
 
   openSignUpDialog() {
-    console.log("open sign up");
     this.signUpDialog.open(SignUpFormDialog);
-  }
-
-  setLogin(emailValue: string) {
-    this.email.set(emailValue);
   }
 }
