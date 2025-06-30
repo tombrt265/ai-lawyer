@@ -36,7 +36,11 @@ export class LoginFormDialog {
 
   // authService.loginUser() returns boolean, myb. work with loggedIn = signal(false)
   loginUser() {
-    this.authService.loginUser(this.loginData());
+    this.authService.loginUser(this.loginData()).then((loggedIn) => {
+      if (loggedIn) {
+        this.closeDialog();
+      }
+    });
   }
 
   closeDialog() {
