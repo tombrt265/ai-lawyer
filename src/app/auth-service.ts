@@ -34,19 +34,19 @@ export class AuthService {
     console.log("User logged out");
   }
 
-  async signUpUser(signupData: SignUpData) {
+  async signUpUser(signupData: SignUpData): Promise<Boolean> {
     const res = await fetch(`${this.apiUrlUsers}`);
     const users = await res.json();
     for (const user of users) {
       if (signupData.email == user.email) {
         console.log("User already exists");
-        return;
+        return false;
       }
     }
-    return this.http
-      .post(this.apiUrlUsers, signupData)
-      .subscribe((userProfile) => {
-        console.log("Updated users: ", userProfile);
-      });
+    this.http.post(this.apiUrlUsers, signupData).subscribe((userProfile) => {
+      console.log("Updated users: ", userProfile);
+    });
+    this.isLoggedIn.update(() => true);
+    return true;
   }
 }

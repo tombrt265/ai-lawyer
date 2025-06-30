@@ -22,8 +22,7 @@ export interface SignUpData {
   ],
 })
 export class SignUpFormDialog {
-  // authService is injected in SignUpDialog and LoginDialog (should be top-level-variable??)
-  private readonly authService = inject(AuthService);
+  private readonly auth = inject(AuthService);
   private readonly signUpDialogRef = inject(MatDialogRef);
   private readonly loginDialog = inject(MatDialog);
 
@@ -51,7 +50,11 @@ export class SignUpFormDialog {
   }
 
   signUpUser() {
-    this.authService.signUpUser(this.signupData());
+    this.auth.signUpUser(this.signupData()).then((signedUp) => {
+      if (signedUp) {
+        this.closeDialog();
+      }
+    });
   }
 
   closeDialog() {
