@@ -13,15 +13,19 @@ export interface LoginData {
   selector: "app-login-form-dialog",
   imports: [FormsModule],
   templateUrl: "./login-form-dialog.html",
-  styleUrl: "./login-form-dialog.scss",
+  styleUrls: [
+    "../../../styles.css",
+    "../../app.css",
+    "./login-form-dialog.scss",
+  ],
 })
 export class LoginFormDialog implements OnDestroy {
   private readonly authService = inject(AuthService);
   private readonly loginDialogRef = inject(MatDialogRef);
   private readonly signUpDialog = inject(MatDialog);
 
-  email = signal<string>("werwe");
-  password = model<string>("wer");
+  email = signal<string>("");
+  password = model<string>("");
 
   ngOnDestroy(): void {
     console.log("Destroy");

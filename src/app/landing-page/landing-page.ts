@@ -8,7 +8,7 @@ import { SignUpFormDialog } from "./sign-up-form-dialog/sign-up-form-dialog";
   selector: "app-landing-page",
   imports: [RouterModule],
   templateUrl: "./landing-page.html",
-  styleUrl: "./landing-page.scss",
+  styleUrls: ["../app.css", "./landing-page.scss"]
 })
 export class LandingPage {
   readonly loginDialog = inject(MatDialog);

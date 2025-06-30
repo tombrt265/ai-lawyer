@@ -1,18 +1,32 @@
 <h2>Login Form</h2>
 <form (submit)="loginUser()">
-  <label for="email">Email</label>
   <input
     id="email"
     type="email"
     name="email"
+    placeholder="Email Address"
     [ngModel]="email()"
     (ngModelChange)="email.set($event)"
   />
+  <input
+    id="password"
+    type="text"
+    name="password"
+    placeholder="Password"
+    [(ngModel)]="password"
+  />
 
-  <label for="password">Password</label>
-  <input id="password" type="text" name="password" [(ngModel)]="password" />
-
-  <button (click)="closeDialog();openSignUpDialog()">Sign Up</button>
-  <button (click)="closeDialog()">Close</button>
-  <button type="submit">Login</button>
+  <section class="buttons">
+    <button id="loginBtn" class="btn-primary" type="submit">Login</button>
+    <span>---------- OR ----------</span>
+    <span
+      >Don't have an account?
+      <a id="signupBtn" (click)="closeDialog();openSignUpDialog()"
+        >Sign Up</a
+      ></span
+    >
+    <a type="button" id="closeBtn" class="btn-light" (click)="closeDialog()"
+      >Close</a
+    >
+  </section>
 </form>

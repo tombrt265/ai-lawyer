@@ -15,7 +15,11 @@ export interface SignUpData {
   selector: "app-sign-up-form-dialog",
   imports: [ReactiveFormsModule],
   templateUrl: "./sign-up-form-dialog.html",
-  styleUrl: "./sign-up-form-dialog.scss",
+  styleUrls: [
+    "../../../styles.css",
+    "../../app.css",
+    "./sign-up-form-dialog.scss",
+  ],
 })
 export class SignUpFormDialog {
   // authService is injected in SignUpDialog and LoginDialog (should be top-level-variable??)

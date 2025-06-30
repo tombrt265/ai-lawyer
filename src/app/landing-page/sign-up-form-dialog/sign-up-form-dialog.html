@@ -1,18 +1,36 @@
 <h2>Sign Up Form</h2>
 <form [formGroup]="SignUpForm" (submit)="signUpUser()">
-  <label for="surname">Surname</label>
-  <input id="surname" type="text" formControlName="surname" />
+  <input
+    id="surname"
+    type="text"
+    placeholder="Surname"
+    formControlName="surname"
+  />
 
-  <label for="name">Name</label>
-  <input id="name" type="text" formControlName="name" />
+  <input id="name" type="text" placeholder="Last Name" formControlName="name" />
 
-  <label for="email">Email</label>
-  <input id="email" type="email" formControlName="email" />
+  <input
+    id="email"
+    type="email"
+    placeholder="Email Address"
+    formControlName="email"
+  />
 
-  <label for="password">Password</label>
-  <input id="password" type="text" formControlName="password" />
-  
-  <button (click)="closeDialog();openLoginDialog()">Login</button>
-  <button (click)="closeDialog()">Close</button>
-  <button type="submit">Sign Up</button>
+  <input
+    id="password"
+    type="text"
+    placeholder="Password"
+    formControlName="password"
+  />
+
+  <section class="buttons">
+    <button id="signupBtn" class="btn-primary" type="submit">Sign Up</button>
+    <span
+      >Have an account?
+      <a id="loginBtn" (click)="closeDialog();openLoginDialog()"
+        >Log in</a
+      ></span
+    >
+    <a id="closeBtn" class="btn-light" (click)="closeDialog()">Close</a>
+  </section>
 </form>

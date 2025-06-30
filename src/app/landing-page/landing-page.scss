@@ -1,13 +1,4 @@
 /* Header Section */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-  padding: var(--content-padding);
-  box-shadow: 0px 5px 25px var(--shadow-color);
-  color: var(--bg-dark);
-}
 .logo-field {
   height: 100%;
   display: flex;
@@ -43,18 +34,6 @@ header {
   font-size: 1.2rem;
   color: var(--bg-grey);
   margin-bottom: 2rem;
-}
-.btn-primary {
-  background-color: var(--primary-color);
-  color: var(--bg-light);
-  padding: 0.8rem 2rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 100;
-  display: inline-block;
-}
-.btn-primary:hover {
-  background-color: var(--primary-light-color);
 }
 
 /* Features Section */
